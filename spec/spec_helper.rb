@@ -1,9 +1,11 @@
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 require 'formtastic-cocoon'
-require 'spec'
-require 'spec/autorun'
+require 'rspec/core'
+require 'simplecov'
 
-Spec::Runner.configure do |config|
-  
+SimpleCov.start 'rails'
+
+RSpec.configure do |c|
+  c.color_enabled = true
 end

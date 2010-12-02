@@ -1,16 +1,18 @@
 require 'rubygems'
 require 'rake'
+require "rspec/core/rake_task"
+
 
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "formtastic-cocoon"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{gem that enables easier nested forms with formtastic}
+    gem.description = %Q{Unobtrusive nested forms handling in formtastic, using jQuery. Use this and discover cocoon-heaven.}
     gem.email = "nathan@dixis.com"
     gem.homepage = "http://github.com/nathanvda/formtastic-cocoon"
-    gem.authors = ["nathanvda"]
-    gem.add_development_dependency "rspec", ">= 1.2.9"
+    gem.authors = ["Nathan Van der Auwera"]
+    gem.add_development_dependency "rspec", ">= 2.0.0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
@@ -18,17 +20,19 @@ rescue LoadError
   puts "Jeweler (or a dependency) not available. Install it with: gem install jeweler"
 end
 
-require 'spec/rake/spectask'
-Spec::Rake::SpecTask.new(:spec) do |spec|
-  spec.libs << 'lib' << 'spec'
-  spec.spec_files = FileList['spec/**/*_spec.rb']
-end
+#require 'spec/rake/spectask'
+#Spec::Rake::SpecTask.new(:spec) do |spec|
+#  spec.libs << 'lib' << 'spec'
+#  spec.spec_files = FileList['spec/**/*_spec.rb']
+#end
+#
+#Spec::Rake::SpecTask.new(:rcov) do |spec|
+#  spec.libs << 'lib' << 'spec'
+#  spec.pattern = 'spec/**/*_spec.rb'
+#  spec.rcov = true
+#end
 
-Spec::Rake::SpecTask.new(:rcov) do |spec|
-  spec.libs << 'lib' << 'spec'
-  spec.pattern = 'spec/**/*_spec.rb'
-  spec.rcov = true
-end
+RSpec::Core::RakeTask.new(:spec)
 
 task :spec => :check_dependencies
 
