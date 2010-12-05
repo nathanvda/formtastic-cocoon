@@ -6,11 +6,11 @@ require "rspec/core/rake_task"
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "formtastic-cocoon"
+    gem.name = "formtastic_cocoon"
     gem.summary = %Q{gem that enables easier nested forms with formtastic}
     gem.description = %Q{Unobtrusive nested forms handling in formtastic, using jQuery. Use this and discover cocoon-heaven.}
     gem.email = "nathan@dixis.com"
-    gem.homepage = "http://github.com/nathanvda/formtastic-cocoon"
+    gem.homepage = "http://github.com/nathanvda/formtastic_cocoon"
     gem.authors = ["Nathan Van der Auwera"]
     gem.add_development_dependency "rspec", ">= 2.0.0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
@@ -43,7 +43,7 @@ Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "formtastic-cocoon #{version}"
+  rdoc.title = "formtastic_cocoon #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
