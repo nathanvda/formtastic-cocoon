@@ -1,5 +1,9 @@
 # formtastic-cocoon
 
+**Note: this gem is deprecated. The gem has been renamed to [cocoon](http://github.com/nathanvda/cocoon), as it was not
+limited to formtastic alone.**
+
+
 Formtastic-cocoon is a Rails3 gem, extending formtastic, to allow easier handling of nested forms.
 
 Nested forms are forms that handle nested models and attributes in one form.
