@@ -1,5 +1,11 @@
 require 'formtastic_cocoon/view_helpers'
 
+p "******************************************************************"
+p "The 'formtastic_cocoon' gem has been renamed to 'cocoon'"
+p "Install the renamed gem using 'gem install cocoon'"
+p "******************************************************************"
+
+
 module FormtasticCocoon
   class Railtie < ::Rails::Railtie
 
